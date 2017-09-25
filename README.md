@@ -17,6 +17,9 @@ Streaming music service.
 - (album)
 - (genre)
 
+### Add helper for displaying duration as ##:##
+### Change form to use select for choosing artist
+
 ## Playlist
 - name: string
 - songs -> Many Songs
