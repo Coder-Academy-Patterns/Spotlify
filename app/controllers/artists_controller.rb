@@ -10,7 +10,8 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
-    set_artist
+    # @artist set by the set_artist method
+    @songs = @artist.songs
   end
 
   # GET /artists/new
@@ -20,7 +21,6 @@ class ArtistsController < ApplicationController
 
   # GET /artists/1/edit
   def edit
-    set_artist
   end
 
   # POST /artists

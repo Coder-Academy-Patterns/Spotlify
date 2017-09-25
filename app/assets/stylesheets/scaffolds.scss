@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #FFF2B9;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -45,6 +45,23 @@ div {
     margin-bottom: 10px;
   }
 }
+
+table {
+  border-collapse: collapse;
+}
+
+.decade-1980s {
+  background-color: #F9B1F0;
+}
+.decade-1990s {
+  background-color: #F9D9B1;
+}
+.decade-2000s {
+  background-color: #B1D6F9;
+}
+
+
+
 
 #notice {
   color: green;
