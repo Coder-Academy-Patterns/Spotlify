@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :artist_id %>
-    <%= form.text_field :artist_id, id: :song_artist_id %>
+    <%= form.collection_select :artist_id, Artist.all, :id, :name, id: :song_artist_id, include_blank: true %>
   </div>
 
   <div class="field">
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :released_at %>
-    <%= form.date_select :released_at, id: :song_released_at %>
+    <%= form.date_select :released_at, id: :song_released_at, start_year: 1900 %>
   </div>
 
   <div class="actions">
