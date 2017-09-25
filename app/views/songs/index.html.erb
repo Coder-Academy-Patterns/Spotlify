@@ -18,7 +18,7 @@
       <tr>
         <td><%= song.name %></td>
         <td><%= song.artist.name %></td>
-        <td><%= song.duration %></td>
+        <td><%= format_duration song.duration %></td>
         <td><%= song.released_at %></td>
         <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
