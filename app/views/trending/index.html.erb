@@ -1,0 +1,12 @@
+<nav>
+  <%= link_to 'All Songs', songs_path %>
+  <%= link_to 'Trending', songs_path %>
+<nav>
+
+<h1>Trending songs</h1>
+
+<ol>
+<% @top_play_counts.each do |play_count| %>
+  <li><%= play_count.song.name %> (<%= play_count.count %> plays)</li>
+<% end %>
+</ol>
