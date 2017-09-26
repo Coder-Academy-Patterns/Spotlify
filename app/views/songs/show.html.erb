@@ -18,5 +18,10 @@
   <%= @song.released_at %>
 </p>
 
+<p>
+  <strong>Play count:</strong>
+  <%= @song.play_count.count %>
+</p>
+
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>

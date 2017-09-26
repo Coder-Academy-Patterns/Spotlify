@@ -10,6 +10,25 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
+    #set_song
+    #@song = Song.find(params[:id])
+
+    # Find existing play count record for this song, if it exists
+    play_count = PlayCount.find_by(song_id: @song.id)
+    # Never been played if there is not play count record yet
+    if play_count == nil
+      # Create play count in the database for this song
+      play_count = PlayCount.new(song: @song, count: 1)
+      # Save to database
+      play_count.save
+    else
+      # Increment that play count’s count value
+      play_count.count += 1
+      # Save to database
+      play_count.save
+    end
+
+    # play_count variable will die
   end
 
   # GET /songs/new
